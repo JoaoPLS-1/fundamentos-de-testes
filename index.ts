@@ -70,11 +70,11 @@ interface IRealizaCompra {
 interface ICompra {
     id: number,
     valor: number,
+    quantidade: number
     frete: number,
     compraRealizada: boolean,
     valorPago: number,
     cumpom: boolean,
-    quantidade: number
 }
 
 function calcularValorTotal(compra: ICompra): IRealizaCompra {
@@ -106,9 +106,9 @@ function calcularValorTotal(compra: ICompra): IRealizaCompra {
             ...compra,
             frete: freteCalculado,
             compraRealizada: true,
+            quantidade: quantidadeTotal,
             valorPago: valorTotal,
             cumpom: true,
-            quantidade: quantidadeTotal
         }
     }
     
@@ -116,12 +116,12 @@ function calcularValorTotal(compra: ICompra): IRealizaCompra {
 }
 const entregaCompra = calcularValorTotal({
     id: 1,
-    valor: 1000,
-    frete: 0,
     compraRealizada: false,
+    valor: 110,
+    quantidade: 2,
+    frete: 0,
     valorPago: 0,
     cumpom: true,
-    quantidade: 2
 })
 console.log('Compra processada:', entregaCompra)
 

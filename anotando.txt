@@ -1,0 +1,20 @@
+Anotando 
+
+Criamos um objeto aluno com {id,nome, xp, nível, multiplicadorCombo}
+
+Criamos uma interface ITarefa com {id, tarefa{id, titulo, prazo}
+Criamos uma interface IEntregaTarefa com {idAluno, tarefa: ITarefa}
+Criamos uma função de entregar Tarefas com retorno boolean, com tipo: IEntregarTarefa, com parametros ({idAluno, tarefa}) -> {
+
+Se não tiver id aluno ou não tiver tarefa retorna falso no if (Return false)
+
+Criamos uma var para total xp true
+
+Criamos uma var para pegar a data atual
+
+Se o prazo da tarefa for menor que data atual o total xp recebe false
+
+Criamos uma var que recebe o xp validando: se total xp for true recebe 200, se nao recebe 100 (ternario) (Definimos xp padrao com 200)
+
+atualiza nosso aluno com {...} com as informações atuais da tarefa, id, prazo (aluno = {... informações atualizadas)
+} 

@@ -1,0 +1,32 @@
+Consulta de criação em um projeto node
+"npm init" inicia um projeto em node
+npm init -y cria um arquivo package.json
+
+devdependencies não é enviado para build do projeto
+
+ordem:
+npm init -y
+npm install typescript -D
+npx tsc --init
+node -v (entra no site tsconfig e altera o arquivo tsconfig.json com o texto da versão)
+npm install @types/node tsx
+
+acrescentamos em packagejson- "scripts" :
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch index.ts",
+
+Mudamos em tsconfig:
+Alterações já feitas
+"module": "commonjs"
+"moduleResolution": "node",
+    "outDir": "dist"
+
+acrescentamos em tsconfig também o DOM em lib:
+"lib": [
+      "es2023",
+      "DOM"
+    ],
+
+
+npm run dev para rodar o arquivo em terminal
